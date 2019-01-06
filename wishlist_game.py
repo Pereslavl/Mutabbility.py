@@ -15,13 +15,13 @@ video_game = [
 
 ]
 
-
 def display_wishlist(display_name, wishes):
+    items = wishes.copy()
     print(display_name + ":")
-    suggested_gift = wishes.pop(0)
+    suggested_gift = items.pop(0)
     print("======>", suggested_gift, "<=======")
-    for wish in wishes:
-        print("* " + wish)
+    for item in items:
+        print("* " + item)
     print()
 
 display_wishlist("Books", books)
